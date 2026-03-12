@@ -33,11 +33,15 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{ragged2e}
 
 % --- Colores e hipervínculos ---
 \usepackage[dvipsnames]{xcolor}
-\usepackage[colorlinks=true, linkcolor=NavyBlue, citecolor=NavyBlue,
-            urlcolor=NavyBlue, bookmarks=true]{hyperref}
+\definecolor{primarygray}{RGB}{30,30,30}
+\definecolor{accentgray}{RGB}{80,80,80}
+
+\usepackage[colorlinks=true, linkcolor=primarygray, citecolor=accentgray,
+            urlcolor=primarygray, bookmarks=true]{hyperref}
 
 % --- Gráficos y cajas ---
 \usepackage{graphicx}
@@ -61,8 +65,8 @@
 \newtcolorbox{conceptoclave}[1][]{
   breakable,
   enhanced,
-  colback=NavyBlue!5,
-  colframe=NavyBlue!50,
+  colback=gray!5,
+  colframe=gray!50,
   boxrule=0.8pt,
   title={Concepto clave},
   fonttitle=\bfseries\small,
@@ -80,7 +84,7 @@
 
 % --- Sección personalizada ---
 \usepackage{titlesec}
-\titleformat{\section}{\large\bfseries\color{NavyBlue}}{\thesection.}{0.6em}{}[\titlerule]
+\titleformat{\section}{\large\bfseries\color{primarygray}}{\thesection.}{0.6em}{}[\titlerule]
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
 \titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection.}{0.4em}{}
 
@@ -97,7 +101,7 @@
   \vspace{0.5cm}
   {\rule{\linewidth}{1.5pt}\par}
   \vspace{0.8cm}
-  {\LARGE\bfseries\color{NavyBlue}
+  {\LARGE\bfseries\color{primarygray}
     Proyecto: Pista de Atletismo\\[0.3cm]
     Isla de Pascua (Rapa Nui)\par}
   \vspace{1.5cm}
