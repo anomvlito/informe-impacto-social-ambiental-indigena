@@ -1,0 +1,1102 @@
+% ============================================================
+% INFORME DE IMPACTO SOCIAL, AMBIENTAL Y TERRITORIAL
+% Proyecto: Pista de Atletismo — Isla de Pascua (Rapa Nui)
+% Investigadores: Fabián Ortega, Lucas Nervi, Vicente Belgeri & Matías Pardo (2026)
+% ============================================================
+
+\documentclass[12pt, a4paper]{article}
+
+% --- Paquetes básicos ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-noshorthands]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% --- Márgenes y geometría ---
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm, headheight=14pt]{geometry}
+
+% --- Tipografía ---
+\usepackage{charter}   % Fuente serif legible para documentos institucionales
+
+% --- Encabezados y pies de página ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Informe de Impacto — Pista de Atletismo Rapa Nui}
+\lhead{\small Ortega, Nervi, Belgeri \& Pardo, 2026}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- Listas y tablas ---
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+
+% --- Colores e hipervínculos ---
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true, linkcolor=NavyBlue, citecolor=NavyBlue,
+            urlcolor=NavyBlue, bookmarks=true]{hyperref}
+
+% --- Gráficos y cajas ---
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+% --- Cajas de citas etnográficas ---
+\newtcolorbox{citaetno}{
+  breakable,
+  enhanced,
+  colback=gray!8,
+  colframe=gray!40,
+  boxrule=0.5pt,
+  left=10pt, right=10pt, top=6pt, bottom=6pt,
+  fontupper=\itshape,
+  before upper={\footnotesize\noindent\rule{\linewidth}{0.3pt}\\[4pt]},
+  after upper={\\[4pt]\rule{\linewidth}{0.3pt}}
+}
+
+% --- Caja de concepto clave ---
+\newtcolorbox{conceptoclave}[1][]{
+  breakable,
+  enhanced,
+  colback=NavyBlue!5,
+  colframe=NavyBlue!50,
+  boxrule=0.8pt,
+  title={Concepto clave},
+  fonttitle=\bfseries\small,
+  #1
+}
+
+% --- Bibliografía ---
+\usepackage[authoryear, round, sort]{natbib}
+\bibliographystyle{apalike}
+
+% --- Párrafos y espaciado ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+\renewcommand{\baselinestretch}{1.2}
+
+% --- Sección personalizada ---
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\color{NavyBlue}}{\thesection.}{0.6em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection.}{0.4em}{}
+
+% ============================================================
+%                    INICIO DEL DOCUMENTO
+% ============================================================
+\begin{document}
+
+% ---- Portada ----
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\Large\bfseries INFORME DE IMPACTO SOCIAL, AMBIENTAL Y TERRITORIAL\par}
+  \vspace{0.5cm}
+  {\rule{\linewidth}{1.5pt}\par}
+  \vspace{0.8cm}
+  {\LARGE\bfseries\color{NavyBlue}
+    Proyecto: Pista de Atletismo\\[0.3cm]
+    Isla de Pascua (Rapa Nui)\par}
+  \vspace{1.5cm}
+  {\large Informe Preliminar — Sistema Nacional de Inversiones (SNI)\par}
+  \vspace{2cm}
+
+  \begin{minipage}{0.9\textwidth}
+    \centering
+    {\normalsize\textbf{Elaborado por:}\\[0.4cm]
+    Fabián Ortega \& Lucas Nervi\\[0.1cm]
+    \textit{En base a investigación cualitativa de campo (2024--2026)}\\[0.1cm]
+    {\footnotesize Metodología: Teoría Fundamentada Constructivista con principios polinésicos (Talanoa / Vā)}\\[0.4cm]
+    \rule{0.5\linewidth}{0.3pt}\\[0.3cm]
+    Vicente Belgeri \& Matías Pardo\\[0.1cm]
+    {\footnotesize Perfil estratégico, justificación institucional y formulación SNI}\par}
+  \end{minipage}
+
+  \vspace{2cm}
+  {\normalsize Hanga Roa, Isla de Pascua\par}
+  {\normalsize Marzo 2026\par}
+
+  \vfill
+  {\footnotesize\color{gray}
+    Este informe se fundamenta en una investigación cualitativa con 17 actores clave
+    del ecosistema deportivo y comunitario de Rapa Nui (2024--2025).
+    Los hallazgos y citas están sujetos a validación comunitaria.\par}
+\end{titlepage}
+
+% ---- Tabla de contenidos ----
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Introducción}
+% ============================================================
+
+La comuna de Isla de Pascua (Rapa Nui) constituye uno de los territorios habitados
+permanentemente más aislados del planeta, ubicada a aproximadamente 3.700 km del
+territorio continental de Chile. Con una superficie de 163,6 km$^2$ y una población
+cercana a 7.750 habitantes ---concentrada principalmente en el poblado de Hanga Roa---,
+Rapa Nui representa un caso singular dentro del sistema de inversión pública chilena:
+un territorio insular con reconocimiento de pueblo indígena originario y una historia
+colonial documentada que sigue determinando sus condiciones estructurales actuales.
+
+La economía local depende principalmente del turismo, la pesca artesanal y las
+actividades culturales asociadas al patrimonio rapanui. En este contexto, la
+infraestructura deportiva cumple un rol estratégico de múltiples dimensiones que
+trasciende la provisión de un servicio: actúa simultáneamente como dispositivo de
+salud pública, de organización comunitaria, de transmisión cultural y de resiliencia
+identitaria \citep{hauofa1994}.
+
+El presente informe tiene como objetivo evaluar el \textbf{impacto social, ambiental
+y territorial de la construcción de una pista de atletismo en Rapa Nui}, con el fin
+de justificar su pertinencia dentro del marco de inversión pública. A diferencia de
+informes estándar de este tipo, este documento se fundamenta en una investigación
+cualitativa de campo con 17 actores clave del ecosistema deportivo y comunitario de
+la isla, desarrollada durante 2024--2025 mediante \textbf{Teoría Fundamentada
+Constructivista} \citep{charmaz2014} y principios ético-metodológicos polinésicos
+(\textbf{Talanoa} y \textbf{Vā}) \citep{prescott2008, kaili2005}.
+
+\subsection{Nota metodológica}
+
+Las afirmaciones sobre impacto social de este informe se derivan de evidencia
+empírica recolectada en terreno, no de supuestos genéricos. Las citas textuales
+que aparecen a lo largo del documento provienen de entrevistas en profundidad con
+deportistas, entrenadores, dirigentes, familias y profesionales de salud y educación
+de Rapa Nui. Los principios de diseño derivados del análisis están sujetos a
+\textbf{validación comunitaria} antes de cualquier implementación.
+
+% ============================================================
+\section{Descripción del Proyecto}
+% ============================================================
+
+El proyecto consiste en la \textbf{construcción de una pista de atletismo de estándar
+competitivo}, orientada a fomentar la práctica deportiva, el desarrollo del atletismo
+y la realización de actividades comunitarias en la comuna de Isla de Pascua.
+
+\subsection{Componentes principales}
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Pista de atletismo de 400 metros con superficie sintética
+  \item Áreas para disciplinas atléticas (saltos y lanzamientos)
+  \item Iluminación deportiva
+  \item Graderías y áreas de espectadores
+  \item Equipamiento deportivo especializado
+  \item Espacios de entrenamiento comunitario y multiuso
+\end{itemize}
+
+\subsection{Objetivos del proyecto}
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Fomentar la práctica deportiva en niños, jóvenes y adultos de la comunidad
+  \item Generar infraestructura para el desarrollo del atletismo competitivo y otras
+        disciplinas
+  \item Promover hábitos de vida activa y saludable en la comunidad rapanui
+  \item Crear un espacio comunitario de encuentro social y cultural pertinente al
+        territorio
+  \item Apoyar el desarrollo de talentos deportivos locales con condiciones mínimas
+        dignas
+\end{itemize}
+
+% ============================================================
+\section{Diagnóstico Territorial}
+% ============================================================
+
+\subsection{Marco histórico-colonial}
+
+Para comprender el impacto de cualquier inversión pública en Rapa Nui, es
+indispensable situar el territorio en su historia. La experiencia contemporánea del
+pueblo rapanui está moldeada por una secuencia de traumas históricos que
+desmantelaron la sociedad pre-contacto e instalaron un sistema colonial de
+explotación y control social \citep{cristino2011}.
+
+Entre 1862 y 1863, redadas esclavistas peruanas se llevaron a la fuerza aproximadamente
+al 35\% de la población. El retorno de supervivientes introdujo epidemias que exterminaron
+a más del 90\% de la población restante. Para 1877, solo sobrevivían 111 personas en
+la isla. El período de la Compañía Explotadora de Isla de Pascua (CEIP, 1895--1953)
+consolidó un régimen de \textbf{confinamiento forzado en Hanga Roa}, despojando a la
+comunidad rapanui de sus tierras y reduciéndola a condición de servidumbre.
+
+Esta historia no es meramente un telón de fondo: es \textbf{una memoria activa y
+viva} que informa la identidad, la política y las relaciones comunitarias actuales,
+incluyendo la relación de la comunidad con las instituciones del Estado chileno
+\citep{foerster2021}. El conflicto fundamental sobre la interpretación del ``Acuerdo
+de Voluntades'' de 1888 ---que para la comunidad rapanui fue un tratado de protección
+que reservaba sus derechos sobre el territorio--- permanece \textbf{irresoluto} hasta
+el presente.
+
+\subsection{Aislamiento geográfico y condiciones logísticas}
+
+La insularidad impone condiciones estructurales que no tienen equivalente en el
+territorio continental. La investigación cualitativa que sustenta este informe
+identificó las siguientes condicionantes logístico-económicas \citep{ortega2026}:
+
+\begin{itemize}[leftmargin=*, itemsep=4pt]
+  \item Altos costos de traslado para competencias: cada atleta que sale a competir
+        al continente requiere pasajes aéreos de aproximadamente \$700.000--\$1.200.000
+        sólo en transporte
+  \item Imposibilidad de cumplir calendarios de competencia diseñados para el
+        continente: federaciones nacionales exigen participación en torneos que
+        logísticamente son inviables desde la isla
+  \item Infraestructura deportiva limitada y envejecida, sin mantención adecuada
+  \item Dependencia de recursos fluctuantes y apoyos personales intermitentes
+        para el funcionamiento deportivo
+\end{itemize}
+
+\subsection{Demografía y actores del deporte}
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Población aproximada: 7.750 habitantes (Censo 2017)
+  \item Mayoría concentrada en Hanga Roa
+  \item Presencia significativa de población rapanui con reconocimiento como
+        pueblo indígena originario
+  \item Ecosistema deportivo activo pero fragmentado: múltiples disciplinas
+        (atletismo, natación, fútbol, ciclismo, deportes tradicionales) sin
+        coordinación institucional eficaz
+\end{itemize}
+
+\subsection{Fragmentación institucional y brechas actuales}
+
+La investigación cualitativa evidenció que la oferta deportiva en Rapa Nui es
+\textbf{fragmentada}: cada disciplina negocia por separado con federaciones nacionales,
+la gestión es débil y voluntarista, y hay escasez virtual de apoyo multidisciplinario
+(prevención de lesiones, salud mental deportiva, nutrición) \citep{ortega2026}.
+
+Esta fragmentación tiene consecuencias concretas: agotamiento de dirigentes
+voluntarios que enfrentan burocracia diseñada para organizaciones profesionalizadas,
+dependencia de liderazgos carismáticos individuales que cuando migran o se retiran
+colapsan las iniciativas, y refuerzo de la desconfianza histórica hacia instituciones
+externas.
+
+\begin{conceptoclave}
+  \textbf{Régimen colonial-burocrático} (concepto emergente de la investigación):
+  Las normativas deportivas nacionales, los costos de competencia continental y las
+  lógicas organizativas diseñadas para el ``continente'' operan como barrera
+  estructural para el desarrollo deportivo insular. No es simplemente una cuestión
+  de recursos limitados, sino de \textit{asimetría epistémica}: las reglas del juego
+  fueron escritas sin considerar la realidad insular \citep{escobar2007}.
+\end{conceptoclave}
+
+% ============================================================
+\section{Identificación del Problema Público}
+% ============================================================
+
+\subsection{Problema central}
+
+La comuna de Rapa Nui presenta un \textbf{déficit de infraestructura deportiva
+especializada para la práctica del atletismo}, lo que limita el acceso regular,
+seguro y de calidad a una disciplina base para el desarrollo físico, educativo
+y comunitario de la población. Este déficit no puede analizarse de forma aislada:
+se inscribe en una historia de postergación institucional y aislamiento geográfico
+que refuerza brechas estructurales documentadas por la investigación cualitativa
+\citep{ortega2026}.
+
+\subsection{Manifestaciones del problema}
+
+El problema descrito se expresa en diversas situaciones observables:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Ausencia de una pista reglamentaria o semirreglamentaria para entrenamiento atlético
+  \item Uso de espacios no diseñados para pruebas atléticas, con riesgo de lesiones
+  \item Limitaciones severas para actividades escolares de atletismo (educación física, torneos)
+  \item Menor proyección de talentos deportivos locales que deben migrar al continente
+  \item Baja capacidad para organizar competencias, encuentros o concentraciones
+  \item Pérdida de oportunidades para vincular deporte con turismo, salud y comunidad
+\end{itemize}
+
+\subsection{Causas estructurales}
+
+Entre las principales causas se identifican:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Rezago histórico en infraestructura deportiva especializada, agravado por la condición colonial
+  \item Alta complejidad logística y sobrecosto de materiales en territorio insular
+  \item Priorización de otras necesidades públicas urgentes
+  \item Fragmentación institucional del ecosistema deportivo local (documentada en Sección~\ref{sec:diagnostico})
+  \item Ausencia de un relato estratégico que conecte la pista con beneficios multisectoriales
+\end{itemize}
+
+\subsection{Efectos sociales del problema}
+
+La carencia de infraestructura produce efectos de corto y largo plazo:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Menor acceso a actividad física estructurada y de calidad
+  \item Menor adherencia deportiva de niños y jóvenes (deserción documentada)
+  \item Pérdida de oportunidades de prevención en salud física y mental
+  \item Debilitamiento de trayectorias de formación deportiva sostenida
+  \item Subutilización del deporte como herramienta de integración y cohesión social
+\end{itemize}
+
+% ============================================================
+\section{Impacto Social}
+% ============================================================
+
+\subsection{Salud pública}
+
+La investigación cualitativa reveló que el \textbf{deporte como medio para mejorar
+la salud física} emerge como una narrativa central y proactiva en la comunidad rapanui.
+Sin embargo, esta narrativa choca con brechas estructurales: déficit de kinesiólogos
+y apoyo multidisciplinario obliga a la comunidad a aprender ``a porrazo'' por dolores
+\citep{ortega2026}.
+
+El análisis de la categoría Salud identificó un perfil epidemiológico preocupante en
+la isla: alta prevalencia de enfermedades crónicas vinculadas a cambios alimentarios
+post-colonización, y una crisis de salud mental documentada con 560 consultas en el
+Hospital Hanga Roa en 2018 ---la cifra más alta, superando a hipertensión y diabetes.
+La infraestructura deportiva de calidad puede actuar como dispositivo preventivo en
+ambas dimensiones.
+
+El deporte promueve además un cambio cultural específico documentado en las entrevistas:
+\textbf{el cuidado de lesiones deja de verse como debilidad} y el descanso como
+parte del entrenamiento es revalorizado, contribuyendo a una mayor conciencia corporal
+en la comunidad.
+
+\subsection{Formación deportiva y trayectorias}
+
+La investigación identificó que la variación en trayectorias deportivas ---por qué
+algunas son sostenidas y otras intermitentes o truncas--- \textbf{no depende de la
+motivación individual}, sino de la capacidad colectiva de la comunidad para activar
+condiciones estructurales.
+
+Una pista de atletismo de estándar competitivo habilitaría concretamente:
+
+\begin{itemize}[leftmargin=*, itemsep=4pt]
+  \item \textbf{Fase de iniciación (6--12 años):} espacio lúdico multiactividad sin
+        especialización temprana, reduciendo la brecha de falta de oferta competitiva
+        infantil documentada
+  \item \textbf{Fase de desarrollo (13--17 años):} introducción gradual a la
+        especificidad sin necesidad de traslado al continente
+  \item \textbf{Fase de especialización (18+):} condiciones mínimas para atletas
+        locales que actualmente entrenan en condiciones precarias
+\end{itemize}
+
+La ausencia de apoyos sostenidos genera deserción. Un entrevistado relató:
+
+\begin{citaetno}
+``Éramos 4 competidores, yo tuve que invitar a mi hermano que ya no competía,
+a mi otra hermana que no competía, yo y había otros chicos más y los chicos
+los que estaban.''\\[4pt]
+\rightline{\footnotesize--- Atleta participante, entrevista en profundidad}
+\end{citaetno}
+
+Esta cita ilustra cómo la falta de infraestructura y estímulos suficientes provoca
+baja participación, obligando a recurrir a personas que ya habían abandonado el
+deporte.
+
+\subsection{Cohesión comunitaria y capital social}
+
+La investigación documentó que la práctica deportiva actúa como \textbf{motor de
+cohesión comunitaria} en Rapa Nui. El ciclo virtuoso se alimenta de la
+\textit{persistencia en la participación}, que genera \textit{percepción de
+competencia y logro}, reforzando el \textit{valor de la participación} \citep{ortega2026}.
+
+El análisis del \textbf{capital social y estructuras de apoyo} identificó que cuando
+los mecanismos de apoyo colectivo operan efectivamente, se observan:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Mayor retención de atletas y participantes
+  \item Regreso de talentos con aprendizaje externo (migración circular no definitiva)
+  \item Aumento de participación femenina
+  \item Reputación positiva de las organizaciones deportivas en la comunidad
+\end{itemize}
+
+\subsection{Oportunidades para la juventud}
+
+El discurso sobre la juventud en Rapa Nui se articula en torno a una poderosa
+narrativa de potencialidad. Los jóvenes son concebidos como \textbf{``Diamantes en
+Bruto''}, portadores de una energía juvenil como recurso fundamental para el
+desarrollo colectivo \citep{ortega2026}. Sin embargo, esta narrativa coexiste con
+\textbf{tensiones intergeneracionales}:
+
+\begin{citaetno}
+``Eso es pa' nosotros, ya pasó, pa' ustedes ya tiene todo esto, tiene beca tiene todo.''\\[4pt]
+\rightline{\footnotesize--- Madre participante, entrevista en profundidad}
+\end{citaetno}
+
+Esta frase ilustra ---desde una perspectiva, no la única--- cómo el deporte puede
+ser visto por algunas familias como ``superado'' frente a la educación formal. Sin
+embargo, la mayoría de los actores entrevistados reconocen que \textbf{educación y
+deporte pueden y deben coexistir}: el acceso a infraestructura deportiva de calidad
+contribuye a reducir conductas de riesgo, fomenta la disciplina y el trabajo colectivo,
+y genera oportunidades de desarrollo que complementan la formación académica.
+
+\subsection{Motivación y adherencia deportiva}
+
+El análisis de la categoría \textbf{Motivación Deportiva} reveló que la motivación
+en Rapa Nui se entiende como un equilibrio delicado entre la fuerza que nace de la
+persona misma y los apoyos que provienen del entorno. La disciplina, la constancia
+y la automotivación grupal son factores decisivos, pero no suficientes:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item La motivación personal existe y es sólida, pero se ve condicionada por
+        condiciones materiales: sin infraestructura, sin incentivos, sin apoyo,
+        la disciplina individual no alcanza para sostener trayectorias
+  \item Las \textit{aspiraciones deportivas} trascienden lo local: deseo de
+        proyección nacional e internacional funciona como horizonte simbólico
+  \item Sin condiciones externas adecuadas, emerge la \textbf{deserción deportiva
+        por carencia de apoyo y logros} o la transición de atleta a emprendedor
+        por necesidad económica
+\end{itemize}
+
+% ============================================================
+\section{Impacto en Identidad y Cultura Rapanui}
+% ============================================================
+
+Esta sección constituye el aporte más diferenciador de este informe respecto a
+estudios estándar de infraestructura deportiva. La cultura rapanui no es un
+``factor de riesgo a mitigar'': es \textbf{el contexto que da sentido y
+sostenibilidad} a cualquier proyecto de esta naturaleza.
+
+\subsection{Hanai y deporte como práctica comunitaria}
+
+El concepto rapanui de \textbf{\textit{hanai}} representa una concepción no biológica
+de la crianza: la responsabilidad del cuidado y la formación de los jóvenes es un
+\textit{compromiso social colectivo}, no un deber exclusivo de los padres biológicos.
+Tíos, abuelos y otros miembros de la familia extendida participan activamente en la
+formación de los jóvenes \citep{pakomio2016}.
+
+Este principio se traduce directamente en la práctica deportiva: \textbf{la comunidad
+concibe el desarrollo del atleta joven como responsabilidad colectiva}. Una pista de
+atletismo no es solo equipamiento: es un espacio donde este compromiso comunitario
+se materializa físicamente.
+
+\subsection{Los \textit{koros} como transmisores de saber deportivo}
+
+La investigación documentó que los \textbf{\textit{koros}} (abuelos, ancianos
+conocedores) no son meros observadores del deporte: son \textbf{portadores de saberes
+técnicos deportivos} equivalentes al entrenamiento formal, transmitidos
+intergeneracionalmente a través de práctica y relato \citep{ortega2026}.
+
+Esta dualidad de saberes refleja la construcción de un \textit{habitus} deportivo
+híbrido \citep{bourdieu1990}: el cuerpo aprende tanto a través del entrenamiento
+técnico-científico como de la autogestión y la disciplina comunitaria. Una
+infraestructura que reconoce este saber ---permitiendo que los \textit{koros} sean
+parte del ecosistema de entrenamiento--- fortalece la pertinencia cultural del
+proyecto.
+
+\subsection{Tapati Rapa Nui y el deporte como acto identitario}
+
+El \textbf{Tapati Rapa Nui} es el festival cultural anual que incluye importantes
+componentes deportivos y de destreza física como el \textit{Haka Pei} ---un rito de
+valentía que consiste en deslizarse por la ladera de un cerro en un trineo de
+troncos de plátano. Esta práctica, junto con la memoria del \textit{Tangata Manu}
+(Hombre Pájaro), documenta que el deporte en Rapa Nui \textbf{es un acto identitario
+antes que una práctica meramente recreativa} \citep{ortega2026, cristino2011}.
+
+La infraestructura deportiva moderna, para ser pertinente, debe dialogar con esta
+tradición: no reemplazarla, sino crear condiciones para que las prácticas deportivas
+actuales también sean vividas como expresiones de identidad rapanui.
+
+\subsection{El espacio relacional (\textit{Vā}) y la infraestructura}
+
+El concepto polinésico de \textbf{\textit{Vā}} refiere al espacio relacional entre
+personas que debe ser cuidado y nutrido \citep{kaili2005}. Aplicado a la
+infraestructura: una pista de atletismo no es solo un espacio físico, sino un
+\textbf{espacio relacional} donde se construyen y fortalecen vínculos comunitarios.
+
+Esto tiene implicaciones concretas para el diseño:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Los espacios de graderías y áreas comunitarias son tan importantes como
+        la pista misma: son donde el \textit{Vā} se activa
+  \item El proceso de diseño debe ser participativo: la comunidad debe poder
+        ``hacer propio'' el espacio antes de que exista físicamente
+  \item Los usos del espacio deben incluir actividades culturales, no solo
+        competencias deportivas técnicas
+\end{itemize}
+
+\subsection{Mar de islas: identidad y proyección deportiva}
+
+El filósofo polinésico Epeli Hau'ofa \citeyearpar{hauofa1994} propone que las islas
+del Pacífico no son pequeños territorios aislados, sino nodos de un vasto ``mar de
+islas'': la identidad isleña es fluida, conectada y resiliente. El deportista rapanui
+se mueve en este océano de posibilidades, \textbf{conectando su isla con otros mundos
+sin perder su centro}.
+
+Una pista de atletismo de estándar competitivo ampliaría este horizonte: permitiría
+a atletas rapanui prepararse en la isla y proyectarse al continente y a la región del
+Pacífico sin necesidad de abandonar definitivamente su comunidad.
+
+% ============================================================
+\section{Justificación Estratégica del Proyecto}
+% ============================================================
+
+\subsection{Más que una pista: infraestructura estructurante}
+
+La principal fortaleza de este proyecto es que no debe ser comunicado como una
+obra aislada, sino como una \textbf{infraestructura estructurante} para el
+desarrollo social, deportivo y territorial de Rapa Nui. La investigación
+cualitativa que sustenta este informe lo confirma: la comunidad no concibe
+la pista como un equipamiento técnico, sino como un \textit{espacio de
+posibilidad colectiva} que habilita cinco mecanismos simultáneamente:
+legitimidad, profesionalización, redes, cuidado integral y gobernanza
+\citep{ortega2026}.
+
+La narrativa recomendada para la postulación ante organismos público es:
+
+\begin{quote}
+\textit{``La pista de atletismo de Rapa Nui no sólo responde a una necesidad
+deportiva. Se trata de una infraestructura pública habilitante para la salud,
+la formación de jóvenes, la cohesión comunitaria y la proyección del
+territorio como referente insular de deporte, bienestar y encuentro en el
+Pacífico Sur.''}
+\end{quote}
+
+\subsection{Equidad territorial e inversión con retornos múltiples}
+
+El acceso a infraestructura pública de calidad no debe depender exclusivamente
+de la cercanía con grandes centros urbanos. En territorios insulares y alejados,
+cada obra pública tiene un efecto redistributivo más intenso: corrige brechas
+históricas en acceso a equipamiento, servicios y oportunidades de desarrollo personal.
+
+El proyecto posee retornos de naturaleza múltiple:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item \textbf{Retorno social:} mejora de bienestar, salud y convivencia
+  \item \textbf{Retorno educativo:} fortalecimiento de trayectorias escolares y deportivas
+  \item \textbf{Retorno económico:} eventos, turismo de escala compatible y servicios asociados
+  \item \textbf{Retorno simbólico:} señal potente de inversión en un territorio de alta singularidad
+  \item \textbf{Retorno político-institucional:} proyecto visible, defendible y alineado con equidad territorial
+\end{itemize}
+
+\subsection{Proyección estratégica: Centro Atlético del Pacífico Sur}
+\label{sec:centro_pacifico}
+
+La formulación recomendada no es \textit{``solo una pista''}. El enfoque
+estratégico consiste en presentar la obra como la primera infraestructura
+habilitante de un \textbf{Centro Atlético del Pacífico Sur}, concebido como
+polo de formación atlética, intercambio deportivo, deporte escolar insular,
+bienestar y vida activa, e investigación aplicada a deporte en contextos remotos.
+
+Este cambio de escala mejora significativamente el peso político del proyecto
+porque conecta la obra con una visión de futuro, aumenta la capacidad de atraer
+apoyos interinstitucionales y permite construir un relato diferenciador.
+A mediano plazo, el Centro Atlético del Pacífico Sur podría incorporar sala
+multipropósito para preparación física, unidad de evaluación deportiva, espacios
+de educación y clínica deportiva, residencias cortas para concentraciones, y
+colaboración con universidades y programas de salud.
+
+\subsection{Ventaja habilitante: emplazamiento en Fundo Vaitea}
+
+Un elemento especialmente favorable para la maduración de esta iniciativa es la
+existencia de un terreno propuesto en el sector de \textbf{Fundo Vaitea}, sobre
+terrenos donados para efectos del proyecto. La disponibilidad preliminar de suelo
+representa una ventaja sustantiva dentro de la lógica de inversión pública, ya que
+reduce una de las principales barreras de entrada: la incertidumbre sobre
+localización.
+
+Contar con un emplazamiento posible desde etapas tempranas permite ordenar mejor
+los estudios de factibilidad, anticipar compatibilidades territoriales e iniciar
+conversaciones institucionales con mayor claridad. La localización en Fundo Vaitea
+presenta valor territorial por su escala y potencial de proyección, permitiendo
+concebir la obra no como una pista aislada, sino como parte de una futura
+infra\-estructura deportiva de mayor alcance.
+
+Sin perjuicio de lo anterior, la materialización definitiva deberá quedar sujeta
+a los procesos de validación jurídica, factibilidad técnica, compatibilidad
+normativa, revisión patrimonial y evaluación territorial que correspondan.
+
+\subsection{Referencia preliminar de costos (Resinsa)}
+
+A la fecha de elaboración del presente informe, se cuenta con una
+\textbf{referencia preliminar de costos} asociada a la empresa \textbf{Resinsa},
+vinculada a Werner Schmidt Tuki, antecedente que constituye una base inicial
+para la estimación temprana del proyecto en etapa de perfil.
+
+Este antecedente debe entenderse únicamente como \textbf{referencia presupuestaria
+preeliminar no definitiva}. El costo definitivo deberá establecerse en etapas
+posteriores mediante diseño, especificaciones técnicas, cubicaciones y los
+procesos de cotización o licitación que correspondan conforme a la normativa
+aplicable. Para efectos de postulación, se recomienda trabajar con dos escenarios:
+
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item \textbf{Escenario base:} construcción de pista y operación esencial del recinto
+  \item \textbf{Escenario ampliado:} pista con componentes complementarios que
+        fortalezcan la visión de Centro Atlético del Pacífico Sur
+\end{enumerate}
+
+Esta distinción facilita la priorización de una primera etapa financiable sin
+renunciar a la visión estratégica de largo plazo.
+
+% ============================================================
+\section{Impacto Ambiental}
+% ============================================================
+
+\subsection{Contexto ecosistémico insular}
+
+Rapa Nui es una isla oceánica de origen volcánico, con una ecosistema terrestre
+frágil y altamente endémico. Su condición de territorio insular remoto la hace
+especialmente sensible a intervenciones de infraestructura que en el continente
+tendrían impactos menores.
+
+Los principales factores ecosistémicos a considerar:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Flora endémica con alto grado de vulnerabilidad (incluyendo el \textit{toromiro}
+        en peligro de extinción)
+  \item Ausencia de rellenos sanitarios continuos: los residuos de construcción
+        tienen opciones de disposición limitadas en la isla
+  \item Sistemas de agua dulce sensibles (acuífero costero)
+  \item Patrimonio arqueológico disperso: cualquier excavación requiere supervisión
+        del Consejo de Monumentos Nacionales
+\end{itemize}
+
+\subsection{Impactos en fase de construcción}
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\linewidth}{lXX}
+\toprule
+\textbf{Impacto} & \textbf{Magnitud estimada} & \textbf{Medida de mitigación} \\
+\midrule
+Movimiento de suelo & Moderado (pista de 400m) & Programa de manejo de tierra y revegetación local \\
+Residuos de construcción & Bajo-Moderado & Protocolo de disposición específico para isla; retorno al continente de materiales no reciclables \\
+Emisiones de polvo & Bajo (temporal) & Humectación de frentes de trabajo \\
+Ruido & Bajo (temporal) & Horarios de obras restringidos \\
+Patrimonio arqueológico & Potencialmente Alto & Supervisión del CMN antes y durante excavaciones \\
+\bottomrule
+\end{tabularx}
+\caption{Impactos ambientales en fase de construcción y medidas de mitigación}
+\end{table}
+
+\subsection{Huella logística: el costo ambiental de la insularidad}
+
+Un factor ambiental específico de Rapa Nui que documentos estándar omiten: la
+\textbf{huella de carbono del transporte de materiales}. Todo material de construcción
+---cemento, acero, superficie sintética--- debe llegar a la isla por vía marítima
+(barco mensual) o aérea. Este costo logístico ambiental debe considerarse en la
+evaluación intuitiva y justifica la preferencia por:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Materiales de alta durabilidad para reducir frecuencia de recambio
+  \item Diseño de mínimo mantenimiento complejo
+  \item Priorización de mano de obra local para reducir transporte de trabajadores
+\end{itemize}
+
+\subsection{Impacto en fase de operación}
+
+Una vez construida, la pista genera impactos ambientales positivos y negativos de
+baja magnitud:
+
+\textbf{Positivos:} sustitución de actividades recreativas motorizadas (reconocidas
+en la investigación como fuente de lesiones y riesgo), creación de espacio verde
+complementario, mejoramiento del paisaje en área urbana de Hanga Roa.
+
+\textbf{Negativos:} aumento de tráfico peatonal y vehicular en el área, consumo
+energético de iluminación deportiva. Medidas: iluminación LED de bajo consumo,
+programación de horarios de uso.
+
+% ============================================================
+\section{Participación Comunitaria y Gobernanza}
+% ============================================================
+
+\subsection{El principio de legitimidad comunitaria}
+
+La investigación cualitativa demostró que el \textbf{primer y más crítico mecanismo}
+para el éxito de cualquier iniciativa deportiva en Rapa Nui es la \textbf{legitimidad
+local}: que la iniciativa tenga origen y respaldo comunitario explícito, no que sea
+percibida como ``de afuera'' \citep{ortega2026}.
+
+Esto no es solo un elemento deseable: es un factor sin el cual las iniciativas
+fracasan, independientemente de sus recursos. La investigación documentó el colapso
+de iniciativas bien financiadas por falta de respaldo comunitario.
+
+\textbf{Indicador propuesto:} porcentaje de familias y participantes que reconocen
+el proyecto como ``nuestro'' versus ``de afuera'', medido en consulta comunitaria
+previa al inicio de obras.
+
+\subsection{Actores clave del territorio}
+
+Los siguientes actores deben participar en el proceso de validación y diseño del
+proyecto:
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+\textbf{Actor} & \textbf{Rol en el proceso} \\
+\midrule
+Municipalidad de Isla de Pascua & Coordinación general, facilitador institucional \\
+Consejo de Ancianos Rapa Nui (Te Mau Hatu'o) & Validación cultural y territorial, voz de la comunidad histórica \\
+Organizaciones deportivas locales & Diagnóstico de necesidades, especificaciones técnicas \\
+Comunidades de Hanga Roa & Diagnóstico participativo, usos del espacio \\
+Escuelas y liceo local & Programas de uso escolar, formación deportiva \\
+Hospital Hanga Roa & Integración salud-deporte, apoyo multidisciplinario \\
+IND / Ministerio del Deporte & Marco normativo, financiamiento complementario \\
+Gobernación Marítima & Coordinación institucional estatal \\
+\bottomrule
+\end{tabularx}
+\caption{Actores clave y roles en el proceso participativo}
+\end{table}
+
+\subsection{Proceso participativo propuesto}
+
+Siguiendo el \textbf{Principio de Legitimidad Primero} derivado de la investigación
+\citep{ortega2026}, se propone el siguiente proceso:
+
+\begin{enumerate}[leftmargin=*, itemsep=5pt]
+  \item \textbf{Diagnóstico participativo} (antes de diseñar): reuniones con
+        dirigentes, familias y jóvenes para validar necesidades y espacios de
+        uso. No solo con autoridades.
+  \item \textbf{Vocerías reconocidas}: identificar líderes comunitarios que lideran
+        el proyecto desde dentro, no solo técnicos externos.
+  \item \textbf{Mesa de gobernanza} (durante ejecución): comité con representación
+        de clubes deportivos, escuela, salud y municipio, con metas trimestrales
+        públicas.
+  \item \textbf{Devoluciones pautadas}: reportes a la comunidad del avance
+        (mínimo trimestrales), con espacio de corrección antes de decisiones
+        mayores.
+  \item \textbf{Protocolo de liderazgo femenino}: asegurar participación mínima
+        del 40\% de mujeres en todas las instancias, con mentoría y visibilización
+        de referentes femeninas locales.
+\end{enumerate}
+
+% ============================================================
+\section{Barreras y Mecanismos de Traducción}
+% ============================================================
+
+\subsection{La teoría ``Del potencial al proyecto''}
+
+La investigación cualitativa que sustenta este informe desarrolló una \textbf{teoría
+sustantiva} emergente de los datos: ``\textbf{Del potencial al proyecto}''. Esta
+teoría explica que el éxito o fracaso del desarrollo deportivo en Rapa Nui no
+depende principalmente de la motivación individual de los atletas, sino de la
+\textbf{capacidad colectiva de la comunidad} para activar cinco mecanismos de
+traducción bajo condiciones estructurales adversas \citep{ortega2026}.
+
+Aplicada al proyecto de infraestructura, esta teoría ofrece una \textbf{teoría de
+cambio} concreta:
+
+\begin{conceptoclave}
+  La pista de atletismo no genera impacto social por sí sola. Lo genera en la medida
+  en que \textit{habilita} los cinco mecanismos colectivos: legitimidad, profesionalización,
+  redes, cuidado integral y gobernanza. Sin estos mecanismos, la infraestructura
+  permanecerá subutilizada.
+\end{conceptoclave}
+
+\subsection{Los cinco mecanismos de traducción aplicados al proyecto}
+
+\begin{enumerate}[leftmargin=*, itemsep=8pt]
+  \item \textbf{Legitimidad local}: La pista debe ser co-diseñada con la comunidad.
+    El proceso participativo propuesto en la sección anterior es su condición de
+    posibilidad. Sin legitimidad, la infraestructura será percibida como ``de
+    afuera'' y su uso será intermitente.
+
+  \item \textbf{Profesionalización gradual}: La pista debe acompañarse de un
+    programa de formación de gestores locales ---no sólo de atletas. Transición
+    de talleres informales a rutas con roles definidos, estándares y certificación.
+
+  \item \textbf{Redes y alianzas externas con acompañamiento}: La pista reduce
+    los costos de entrenamiento local, pero debe acompañarse de convenios con
+    federaciones nacionales que reconozcan las limitaciones de la insularidad.
+    Negociación de excepciones fundamentadas al régimen colonial-burocrático.
+
+  \item \textbf{Cuidado integral del atleta}: La pista debe ser parte de un
+    ecosistema que incluya prevención de lesiones, apoyo mental básico y
+    orientación nutricional. El \textbf{Equipo Mínimo Integral} propuesto por
+    la investigación: entrenador/a certificado/a, apoyo en salud mental,
+    kinesiólogo/a, orientación nutricional.
+
+  \item \textbf{Gobernanza coordinada}: Mesa interactor (clubes-escuela-salud-municipio)
+    con metas anuales públicas, criterios de selección de atletas transparentes
+    y seguimiento de cohortes ---no solo de ``estrellas''.
+\end{enumerate}
+
+% ============================================================
+\section{Análisis de Alternativas}
+% ============================================================
+
+\subsection{Alternativa 1: Mantener situación actual}
+
+Consiste en continuar utilizando infraestructura no especializada (calles,
+espacio frente al estadio, otras superficies). Esta alternativa presenta el
+menor costo inmediato, pero perpetúa la brecha documentada, limita el
+desarrollo deportivo y mantiene el déficit de calidad en la oferta pública.
+Su impacto sobre las trayectorias deportivas es nulo, y agrava la deserción
+documentada en la investigación cualitativa \citep{ortega2026}.
+
+\subsection{Alternativa 2: Mejoramiento parcial de espacios existentes}
+
+Implica adaptar o mejorar espacios ya disponibles (estadio, multicanchas).
+Puede tener menor costo inicial, pero usualmente produce rendimientos limitados,
+usos incompatibles y una vida útil funcional menor en términos atléticos. No
+resuelve el problema estructural de falta de pista certificada.
+
+\subsection{Alternativa 3: Construcción de pista de atletismo con enfoque multipropósito}
+
+Es la alternativa recomendada. Permite resolver de manera estructural el problema,
+aumentar la capacidad comunal, generar mayor impacto social y construir una obra
+escalable hacia el Centro Atlético del Pacífico Sur.
+
+\subsection{Síntesis comparativa}
+
+\begin{table}[h!]
+\centering
+\caption{Comparación cualitativa de alternativas}
+\begin{tabularx}{\linewidth}{
+  >{\RaggedRight\arraybackslash}p{3.5cm}
+  >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X}
+\toprule
+\textbf{Criterio} & \textbf{Situación actual} & \textbf{Mejoramiento parcial} & \textbf{Pista multipropósito} \\
+\midrule
+Resolución del problema & Baja & Media & Alta \\
+Impacto social & Bajo & Medio & Alto \\
+Escalabilidad & Nula & Baja & Alta \\
+Visibilidad política & Baja & Media & Alta \\
+Potencial deportivo & Bajo & Medio & Alto \\
+Aporte al SNI & Bajo & Medio & Alto \\
+Compatibilidad con investigación & No & Parcial & Total \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ============================================================
+\section{Hoja de Ruta para Formulación y Postulación}
+% ============================================================
+
+\subsection{Fase 1: Validación política e institucional}
+
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item Aprobación conceptual municipal
+  \item Definición del relato estratégico oficial (narrativa para SNI)
+  \item Priorización del proyecto en cartera comunal/regional
+\end{enumerate}
+
+\subsection{Fase 2: Validación territorial y comunitaria}
+
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item Revisión jurídica del terreno en Fundo Vaitea
+  \item Diagnóstico participativo con actores comunitarios (ver Sección~\ref{sec:gobernanza})
+  \item Evaluación inicial de compatibilidades territoriales y patrimoniales
+\end{enumerate}
+
+\subsection{Fase 3: Estudios habilitantes}
+
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item Topografía del emplazamiento propuesto
+  \item Mecánica de suelos
+  \item Inspección arqueológica (Consejo de Monumentos Nacionales)
+  \item Perfil técnico-económico con costos de ciclo de vida
+  \item Presupuesto detallado con sobrecosto insular
+\end{enumerate}
+
+\subsection{Fase 4: Formulación y postulación}
+
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item Ingreso de iniciativa al Sistema Nacional de Inversiones (SNI)
+  \item Formulación bajo metodología sectorial deportes \citep{SNIdeportes}
+  \item Validación presupuestaria y búsqueda de financiamiento
+\end{enumerate}
+
+\subsection{Fase 5: Diseño, ejecución y activación comunitaria}
+
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item Licitación de diseño con participación comunitaria
+  \item Construcción con mano de obra local priorizada
+  \item Reglamento y plan de operación validado por la comunidad
+  \item Calendario de uso desde la inauguración
+\end{enumerate}
+
+% ============================================================
+\section{Argumentario Institucional para Autoridades}
+% ============================================================
+
+Este proyecto tiene una narrativa sólida y diferenciada según la audiencia
+institucional a la que se presente.
+
+\begin{description}[leftmargin=3.5cm, style=nextline, itemsep=6pt]
+
+  \item[Municipalidad] \textit{Este proyecto entrega a la comuna una infraestructura
+    visible, útil y transversal, con capacidad de impacto real sobre niñez, juventud,
+    salud y vida comunitaria. Es un legado tangible de inversión pública.}
+
+  \item[Gob. Regional] \textit{La iniciativa reduce brechas territoriales en un territorio
+    extremo, combina equidad con alto valor simbólico y puede transformarse en una
+    obra emblemática de descentralización efectiva.}
+
+  \item[IND / Deporte] \textit{La pista crea base física para programas formativos, deporte
+    escolar, desarrollo atlético y articulación con otras disciplinas. Es inversión con
+    retorno deportivo medible.}
+
+  \item[Patrimonio] \textit{El proyecto puede ser una obra pública contemporánea, sobria
+    y respetuosa, diseñada con participación local y compatible con la identidad
+    territorial y el paisaje cultural de Rapa Nui.}
+
+  \item[Ciudadanía] \textit{La pista es de todos. Es una inversión que mejora la calidad
+    de vida de niños, jóvenes, familias y adultos mayores de Rapa Nui, con respeto
+    por la cultura y el territorio.}
+
+\end{description}
+
+% ============================================================
+\section{Conclusión y Justificación de la Inversión}
+% ============================================================
+
+La construcción de una pista de atletismo en Isla de Pascua representa una inversión
+pública estratégica que contribuiría al desarrollo social, deportivo, cultural y
+comunitario de un territorio con características únicas en el sistema de inversión
+pública chileno.
+
+\subsection{Síntesis de impactos}
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\linewidth}{lXl}
+\toprule
+\textbf{Dimensión} & \textbf{Impacto esperado} & \textbf{Magnitud} \\
+\midrule
+Salud pública & Reducción sedentarismo, prevención enfermedades crónicas, salud mental & Alta \\
+Formación deportiva & Trayectorias sostenidas, reducción deserción & Alta \\
+Cohesión comunitaria & Espacio de encuentro, capital social & Alta \\
+Juventud & Reducción conductas riesgo, disciplina, oportunidades & Alta \\
+Identidad cultural & Práctica deportiva como acto identitario rapanui & Alta \\
+Género & Acceso equitativo con diseño participativo & Media-Alta \\
+Ambiental (construcción) & Bajo, controlable con mitigaciones específicas & Baja \\
+Ambiental (operación) & Mínimo, positivo neto & Muy baja \\
+\bottomrule
+\end{tabularx}
+\caption{Resumen de impactos por dimensión}
+\end{table}
+
+\subsection{Condición crítica para el éxito}
+
+La evidencia empírica de esta investigación es clara: ninguna infraestructura
+deportiva en Rapa Nui puede maximizar su impacto sin un \textbf{proceso participativo
+genuino} que preceda y acompañe su instalación. La pista como objeto material es
+condición necesaria pero no suficiente.
+
+La recomendación es avanzar en la formulación del proyecto dentro del
+\textbf{Sistema Nacional de Inversiones}, incorporando:
+
+\begin{enumerate}[leftmargin=*, itemsep=4pt]
+  \item Estudios técnicos y arquitectónicos en diálogo con la comunidad
+  \item Proceso participativo con los actores identificados en la Sección 7
+  \item Validación comunitaria del diseño antes de licitación
+  \item Diseño de un programa de uso y gobernanza post-construcción (no solo
+        construcción del recinto)
+  \item Mecanismo de monitoreo y evaluación con indicadores acordados con
+        la comunidad (retención, participación femenina, continuidad escolar,
+        incidencia de lesiones)
+\end{enumerate}
+
+\begin{center}
+  \textit{``El problema no es `tener o no tener talento', sino cómo la comunidad
+  convierte ese talento en un proyecto sostenible mientras negocia estructuras
+  que no fueron hechas para ella.''}\\[6pt]
+  \small--- Síntesis de la investigación cualitativa, Ortega \& Nervi (2026)
+\end{center}
+
+Considerando el aislamiento geográfico de la isla, la disponibilidad limitada de
+infraestructura deportiva, la historia colonial documentada y la relevancia del
+deporte como herramienta de desarrollo social y cultural, el proyecto presenta una
+\textbf{alta pertinencia social, territorial y cultural dentro del marco de inversión
+pública en Chile}.
+
+% ============================================================
+% ANEXOS
+% ============================================================
+\newpage
+\section*{Anexo A: Propuesta de cartera inicial de usos del recinto}
+\addcontentsline{toc}{section}{Anexo A: Cartera inicial de usos del recinto}
+
+\begin{table}[h!]
+\centering
+\caption{Propuesta de programación por línea de uso}
+\begin{tabularx}{\linewidth}{>{\bfseries}p{3.5cm}X}
+\toprule
+\textbf{Línea programática} & \textbf{Uso propuesto} \\
+\midrule
+Deporte escolar & Pruebas atléticas, talleres y encuentros inter escolares. \\
+Formación deportiva & Escuela municipal de atletismo por categorías etarias. \\
+Salud comunitaria & Caminatas guiadas, acondicionamiento físico, programas para adultos. \\
+Juventud & Talleres vespertinos de velocidad, resistencia y fuerza básica. \\
+Comunidad & Corridas familiares, jornadas de actividad física, festivales deportivos. \\
+Turismo deportivo & Clínicas, campamentos y programas de intercambio de escala compatible. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Anexo B: Información mínima para presentación institucional}
+\addcontentsline{toc}{section}{Anexo B: Información mínima para presentación institucional}
+
+Antes de entregar este documento como versión final ante organismos de inversión
+pública, se recomienda completar los siguientes elementos con información local
+validada:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Terreno propuesto y justificación de localización (Fundo Vaitea, verificación jurídica)
+  \item Croquis o plano de emplazamiento
+  \item Fotografías del área actual
+  \item Carta de apoyo municipal o institucional firmada
+  \item Estimación preliminar de costos (Resinsa, actualizada)
+  \item Número de establecimientos educacionales beneficiarios
+  \item Programas deportivos activos en la comuna (diagnóstico actualizado 2025--2026)
+  \item Diagnóstico breve de uso esperado por segmento etario
+  \item Ruta de permisos y compatibilidades patrimoniales (CMN, CONAF)
+\end{itemize}
+
+\section*{Anexo C: Antecedentes preliminares de formulación}
+\addcontentsline{toc}{section}{Anexo C: Antecedentes preliminares de formulación}
+
+Para efectos de la presente versión del informe, se consideran como antecedentes
+preliminares de formulación los siguientes elementos de trabajo que deben ser
+formalizados en etapas posteriores:
+
+\begin{itemize}[leftmargin=*, itemsep=3pt]
+  \item Identificación de un emplazamiento preliminar en el sector Fundo Vaitea
+  \item Existencia de terrenos donados para fines asociados al proyecto
+  \item Referencia preliminar de costos asociada a la empresa Resinsa, vinculada
+        a Werner Schmidt Tuki, utilizada únicamente como base inicial de
+        dimensionamiento de inversión
+\end{itemize}
+
+Estos antecedentes deberán ser formalizados, validados y complementados en las
+etapas posteriores de prefactibilidad, diseño y formulación oficial de la
+iniciativa ante el SNI.
+
+% ============================================================
+% GLOSARIO
+% ============================================================
+\newpage
+\section*{Glosario de Términos Rapanui}
+\addcontentsline{toc}{section}{Glosario de términos rapanui}
+
+\begin{description}[leftmargin=3cm, style=nextline, itemsep=6pt]
+  \item[\textit{Hanai}] Práctica de crianza delegada donde tíos, abuelos u otros
+    miembros de la familia extendida asumen responsabilidad de crianza. La relación
+    filial puede ser instaurada por el acto del cuidado y la alimentación, no por
+    vínculo biológico.
+  \item[\textit{Vā}] Espacio relacional entre personas que debe ser cuidado y
+    nutrido. No es un espacio físico sino relacional; su cuidado es condición de
+    la vida comunitaria.
+  \item[\textit{Talanoa}] Metodología conversacional polinésica que prioriza la
+    reciprocidad y el flujo relacional por sobre la rigidez de una guía de preguntas
+    fija. Fue adoptada como principio metodológico de la investigación.
+  \item[\textit{Koros}] Abuelos, ancianos conocedores. Transmisores de saberes
+    técnicos y culturales, incluyendo conocimientos deportivos tradicionales.
+  \item[\textit{Tapati Rapa Nui}] Festival cultural anual de la isla que incluye
+    componentes deportivos, artísticos y de destreza física. Expresión viva de la
+    identidad rapanui contemporánea.
+  \item[\textit{Haka Pei}] Prueba de valentía del Tapati: competidores se deslizan
+    por la ladera de un cerro sobre troncos de plátano, a velocidades de hasta 80 km/h.
+  \item[\textit{Tangata Manu}] Antiguo rito del Hombre Pájaro, última gran expresión
+    de la cultura pre-cristiana en Rapa Nui (1866). Combinaba destreza física,
+    valentía y favor divino.
+  \item[\textit{Te Mau Hatu'o Rapa Nui}] Consejo de Ancianos de Rapa Nui,
+    reconstituido en 1983. Voz histórica de la comunidad en defensa de sus
+    derechos territoriales.
+  \item[\textit{Papa Ra'au}] Medicina tradicional rapanui, en tensión y diálogo
+    con la medicina occidental en el Hospital Hanga Roa.
+\end{description}
+
+% ============================================================
+% BIBLIOGRAFÍA
+% ============================================================
+\newpage
+\bibliography{referencias}
+
+\end{document}
